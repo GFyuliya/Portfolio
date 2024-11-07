@@ -1,4 +1,4 @@
-<h3>В этом проекте проведено тестирование <a href="https://hexlet-products-store.vercel.app/](https://www.knitshop.ru/auth/registration/"> регистрации онлайн-магазина Knitshop.ru</a></h3>
+<h3>В этом проекте проведено тестирование <a href="https://www.knitshop.ru/auth/registration/"> регистрации онлайн-магазина Knitshop.ru</a></h3>
 <h4>Тест-кейсы были созданы в TestRail</h4>
 <p>Для более интересного процесса тестирования я добавила несколько требований: </p>
 <ol>
