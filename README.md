@@ -2,8 +2,8 @@
 <i>Нахожусь в поиске работы manual QA engineer</i>
 <h3><i>Описание учебных проектов</i></h3>
 <h2> <a href="https://github.com/GFyuliya/Portfolio/tree/main/Hexlet%20project%20QA-engineer">Hexlet project QA-engineer</a></h2>
-<h4>В этом проекте проведено тестирование небольшого <a href="https://hexlet-products-store.vercel.app/"> интернет-магазина</a></h4>
-<h6>Учебный проект с курса <a href="https://ru.hexlet.io/programs/qa-engineer"> "Инженер по тестированию"</a> от Хекслет</h6>
+<h6>Основы тестирования изучала на курсе<a href="https://ru.hexlet.io/programs/qa-engineer"> "Инженер по тестированию"</a> от Хекслет</h6>
+<h4>В процессе обучения было проведено тестирование небольшого <a href="https://hexlet-products-store.vercel.app/"> интернет-магазина</a></h4>
 <h6>По требованию курса был использован язык разметки YAML для оформления тест-кейсов, баг-репортов и других документов.</h6>
 <h4>Для разработки интернет-магазина разработчику дали следующее задание</h4>
 <ul>
@@ -56,3 +56,16 @@
 </ul>
 
 
+<h2>Postman</h2>
+Прошла курс <a href="https://stepik.org/certificate/516cba23723a7da5d722a944edcd7f9062dc92d2.pdf">Тестирование ПО: Postman для тестирования API</a>
+<h4>Примеры коллекций:</h4>
+<h4><a href="#"></a>Коллекция на основе открытого API: The Cat API</h4>
+В коллекции !! запросов:
+<ol>
+  <li>GET</li>
+  <li>POST</li>
+  <li>DELETE</li>
+  <li>ляляля</li>
+</ol>
+
+<h4><a href="#"></a>Коллекция на основе открытого API для расчета чего-нибудь</h4>
