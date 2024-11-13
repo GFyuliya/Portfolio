@@ -60,12 +60,12 @@
 Прошла курс <a href="https://stepik.org/certificate/516cba23723a7da5d722a944edcd7f9062dc92d2.pdf">Тестирование ПО: Postman для тестирования API</a> на stepik.
 <h4>Примеры коллекций:</h4>
 <h4><a href="#"></a>Коллекция на основе открытого API: The Cat API</h4>
-В коллекции !! запросов:
+В коллекции  запросов:
 <ol>
   <li>GET</li>
   <li>POST</li>
   <li>DELETE</li>
-  <li>ляляля</li>
+  <li></li>
 </ol>
 
 <h4><a href="#"></a>Коллекция на основе открытого API для расчета чего-нибудь</h4>
