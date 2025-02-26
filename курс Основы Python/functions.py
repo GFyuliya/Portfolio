@@ -119,3 +119,18 @@ def has_char(string, char):
             return True
         i += 1
     return False
+
+
+""" ТЕМА: ЦИКЛ FOR
+Реализуйте функцию filter_string(). 
+Она принимает на вход строку и символ и возвращает новую строку, в которой удален переданный символ во всех его позициях. 
+Если строка не содержит указанный символ, то она возвращается без изменений.
+Регистр исключаемого символа не имеет значения. Итоговая строка также не должна содержать начальные и концевые пробелы.
+"""
+def filter_string(text, char):
+    result = ''
+    low_char = char.lower()
+    for current_char in text:
+        if current_char.lower() != low_char:
+            result += current_char
+    return result.strip()
