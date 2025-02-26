@@ -3,6 +3,7 @@
 <h4>С основами тестирования познакомилась на курсе<a href="https://ru.hexlet.io/programs/qa-engineer"> Инженер по тестированию</a> от Хекслет.</h4>
 <h4>Освоила работу в Postman на курсе<a href="https://stepik.org/certificate/516cba23723a7da5d722a944edcd7f9062dc92d2.pdf"> Тестирование ПО: Postman для тестирования API</a> на stepik.</h4>
 <h4>SQL изучала на курсе stepik <a href="https://stepik.org/course/63054/info"> Интерактивный тренажер по SQL.</h4>
+<h4><a href="https://ru.hexlet.io/courses/python-basics">Основы Python</a> изучала на курсе от Хекслет</h4>
 <h1><i>Описание учебных проектов</i></h1>
 <h2> <a href="https://github.com/GFyuliya/Portfolio/tree/main/Hexlet%20project%20QA-engineer">Hexlet project QA-engineer</a></h2>
 <p>В процессе обучения было проведено тестирование небольшого <a href="https://hexlet-products-store.vercel.app/"> интернет-магазина</a> </p>
