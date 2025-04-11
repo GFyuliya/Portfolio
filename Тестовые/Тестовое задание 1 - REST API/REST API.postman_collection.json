@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "d390db4a-8879-4e83-b777-7623f0d2c9d4",
+		"name": "Тестовое Junior QA Федотова Юлия",
+		"description": "**Тестовое задание на позицию Junior QA**\n\nТест-кейсы для проверки изменения параметров пользователя\n\n- **Метод PUT /user/properties  \n    **Метод позволяет изменять настройки текущего пользователя, такие как имя пользователя и персонажа. А также управлять статусом подписки.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33374106",
+		"_collection_link": "https://www.postman.com/supply-saganist-93656328/workspace/test-environment/collection/33374106-d390db4a-8879-4e83-b777-7623f0d2c9d4?action=share&source=collection_link&creator=33374106"
+	},
+	"item": [
+		{
+			"name": "Позитивные тесты",
+			"item": [
+				{
+					"name": "отключение подписки",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"DISABLED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/properties?accountId=11111111_11",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "accountId",
+									"value": "11111111_11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Изменение имени,  персонажа, подключение подписки - (valid)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Дмитрий\",\r\n    \"secretaryId\": \"SECRETARY_TWO\",\r\n    \"status\": \"ENABLED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/properties?accountId=11111111_11",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "accountId",
+									"value": "11111111_11"
+								}
+							]
+						},
+						"description": "Изменение имени по умолчанию на другое корректное. Смена персонажа **secretary_one** на **secretary_two.**"
+					},
+					"response": []
+				},
+				{
+					"name": "Сброс имени, изменение персонажа",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"secretaryId\": \"SECRETARY_ONE\",\r\n    \"name\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/properties?accountId=11111111_11",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "accountId",
+									"value": "11111111_11"
+								}
+							]
+						},
+						"description": "Сброс имени персонажа при значении поля **name**, равному пустой строке.  \nСмена персонажа **secretary_two** на **secretary_one.**"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Негативные тесты",
+			"item": [
+				{
+					"name": "Изменение статуса подписки (invalid)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"NO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/properties?accountId=11111111_11",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "accountId",
+									"value": "11111111_11"
+								}
+							]
+						},
+						"description": "Попытка изменения статуса подписки на некорретный. Поле **status** может принимать только значения **ENABLED** или **DISABLED.**"
+					},
+					"response": []
+				},
+				{
+					"name": "Смена имени (invalid)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Anna\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/properties?accountId=11111111_11",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"properties"
+							],
+							"query": [
+								{
+									"key": "accountId",
+									"value": "11111111_11"
+								}
+							]
+						},
+						"description": "Попытка изменения имени на некорретное. Поле **name** может принимать только кириллицу."
+					},
+					"response": []
+				},
+				{
+					"name": "Смена персонажа (invalid)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"secretaryId\": \"ONE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"description": "Попытка изменения персонажа на некорретное значение. Поле **secretaryId** может принимать только значения **SECRETARY_ONE** или **SECRETARY_TWO.**"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
